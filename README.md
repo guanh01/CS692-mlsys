@@ -1,6 +1,5 @@
-# CS692 Seminar: System for Machine Learning, Machine Learning for System
-This is the (evolving) reading list for the seminar. 
-The papers are selected from top venues (ICML, ICLR, PLDI, MLSys, etc) and are mostly published 2020. 
+# CS692 Seminar: Systems for Machine Learning, Machine Learning for Systems
+This is the (evolving) reading list for the seminar. The papers are selected from top venues (ICML, ICLR, PLDI, MLSys, etc) and are mostly published 2020. 
 
 #### Table of Contents 
 * [Systems for Machine Learning](#sys4ml)
