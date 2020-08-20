@@ -18,7 +18,7 @@ This is the (evolving) reading list for the seminar. The papers are selected fro
 * [Systems for Machine Learning](#sys4ml)
 	* [Distributed and Parallel Learning](#distributed)
 	* [Efficient Training](#training)
-	* [Efficient Infernece](#inference)
+	* [Efficient Inference](#inference)
 	* [Testing and debugging](#debugging)
 	* [Robustness](#robustness)
 	* [Other Metrics](#other-metrics )
@@ -78,7 +78,7 @@ algorithm to minimize data transfer cost.
 
 
 
-### Efficient Infernece <a name="inference"></a>
+### Efficient Inference <a name="inference"></a>
 
 * [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](https://icml.cc/virtual/2020/poster/6835) 
 * [Train Big, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers](https://icml.cc/virtual/2020/poster/6828) 
