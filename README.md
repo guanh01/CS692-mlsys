@@ -1,7 +1,20 @@
 # CS692 Seminar: Systems for Machine Learning, Machine Learning for Systems
-This is the (evolving) reading list for the seminar. The papers are selected from top venues (ICML, ICLR, PLDI, MLSys, etc) and are mostly published 2020. 
+This is the (evolving) reading list for the seminar. The papers are selected from top venues (ICML, ICLR, PLDI, MLSys, etc) and are mostly published 2020. Topics of interest include, but are not limited to (copied from [MLSys website](https://mlsys.org/Conferences/2021/CallForPapers)):
+* Efficient model training, inference, and serving 
+* Distributed and parallel learning algorithms
+* Privacy and security for ML applications
+* Testing, debugging, and monitoring of ML applications
+* Fairness, interpretability and explainability for ML applications
+* Data preparation, feature selection, and feature extraction
+* ML programming models and abstractions
+* Programming languages for machine learning
+* Visualization of data, models, and predictions
+* Specialized hardware for machine learning
+* Hardware-efficient ML methods
+* Machine Learning for Systems
 
-#### Table of Contents 
+
+### Table of Contents 
 * [Systems for Machine Learning](#sys4ml)
 	* [Distributed and Parallel Learning](#distributed)
 	* [Efficient Training](#training)
@@ -10,6 +23,7 @@ This is the (evolving) reading list for the seminar. The papers are selected fro
 	* [Robustness](#robustness)
 	* [Other Metrics](#other-metrics )
 	* [Data Preparation](#data)
+	* [ML programming models](#pl-models)
 * [Machine Learning for Systems](#ml4sys)
 	* [Programming Language](#pl)
 	* [Memory Management](#mm)
@@ -26,13 +40,6 @@ Proposed a inter-batch pipelining to improve parallel training throughput.
 eliminate conflicts with slightly reduced randomness.
 * [Balancing Efficiency and Fairness in Heterogeneous GPU Clusters for Deep Learning](https://dl.acm.org/doi/abs/10.1145/3342195.3387555)
 This paper talks about the scheduling of GPU clusters, which is not necessary related to deep learning.
-
-
-#### Parallel Learning for GNN 
-
-* [NeuGraph: Parallel Deep Neural Network Computation on Large Graphs](https://www.usenix.org/conference/atc19/presentation/ma) NeuGraph is a new framework that bridges the graph and dataflow models to support efficient and scalable parallel neural network computation on graphs. Basically, it  manages data partitioning, scheduling, and parallelism in dataflow-based deep learning frameworks in order to achieve better performance for GNN training. 
-
-
 
 
 ### Efficient Training <a name="training"></a>
@@ -57,6 +64,10 @@ This paper talks about the scheduling of GPU clusters, which is not necessary re
 * [GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph Embedding ](https://openreview.net/forum?id=r1lGO0EKDH)
 * [Improving the Accuracy, Scalability, and Performance of Graph Neural Networks with Roc](https://proceedings.mlsys.org/papers/2020/83) The paper presents a distributed multi-GPU framework for fast GNN training and inference on graphs. ROC tackles two significant system challenges for distributed GNN computation: Graph partitioning and (2) memory management.  Graph partitioning is based on an online-trained linear regression model. The memory management decides in which device memory to store each intermediate tensor to minimize data transfter cost. ROC introduces a dynamic programming
 algorithm to minimize data transfer cost. 
+* [NeuGraph: Parallel Deep Neural Network Computation on Large Graphs](https://www.usenix.org/conference/atc19/presentation/ma) NeuGraph is a new framework that bridges the graph and dataflow models to support efficient and scalable parallel neural network computation on graphs. Basically, it  manages data partitioning, scheduling, and parallelism in dataflow-based deep learning frameworks in order to achieve better performance for GNN training. 
+* [Deep graph library: Towards efficient and scalable deep learning on graphs](https://arxiv.org/abs/1909.01315)
+* [PCGCN: Partition-Centric Processing for Accelerating Graph Convolutional Network](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9139807)
+* [Reducing Communication in Graph Neural Network Training](https://arxiv.org/abs/2005.03300)
 
 
 #### Continous Learning  
@@ -74,7 +85,7 @@ algorithm to minimize data transfer cost.
 * [Boosting Deep Neural Network Efficiency with Dual-Module Inference](https://icml.cc/virtual/2020/poster/6670)
 
 
-#### Static Compression 
+#### Compression 
 
 * [BlockSwap: Fisher-guided Block Substitution for Network Compression on a Budget ](https://openreview.net/forum?id=SklkDkSFPB)
 * [Probabilistic Connection Importance Inference and Lossless Compression of Deep Neural Networks ](https://openreview.net/forum?id=HJgCF0VFwr)
@@ -155,7 +166,7 @@ The work focuses on the improvement of performance for ML-as-a-Service:: develop
 * [EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks ](https://openreview.net/forum?id=HJem3yHKwH)
 * [Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference ](https://openreview.net/forum?id=rJgzzJHtDB)
 
-### Other Metrics <a name="other-metrics"></a>
+### Other Metrics (Interpretability, Privacy, etc.) <a name="other-metrics"></a>
 
 * [Privacy-Preserving Bandits](https://proceedings.mlsys.org/papers/2020/136)  The paper tries to enable privacy in personalized recommendation. This paper proposes a technique Privacy-Preserving Bandits (P2B); a system that updates local agents by collecting feedback from other local agents in a differentially-private manner. 
 * [Shredder: Learning Noise Distributions to Protect Inference Privacy](https://dl.acm.org/doi/pdf/10.1145/3373376.3378522)
@@ -170,6 +181,9 @@ The work focuses on the cloud-based inference. It introduces the noise to the in
 * [Can gradient clipping mitigate label noise? ](https://openreview.net/forum?id=rklB76EKPr)
 * [SELF: Learning to Filter Noisy Labels with Self-Ensembling ](https://openreview.net/forum?id=HkgsPhNYPS)
 
+### ML programming models <a name="pl-models"></a>
+
+* [Sense & Sensitivities: The Path to General-Purpose Algorithmic Differentiation](https://proceedings.mlsys.org/papers/2020/16) present Zygote, an algorithmic differentiation (AD) system for the Julia language. 
 
 
 ## Machine Learning for Systems <a name="ml4sys"></a>
