@@ -51,13 +51,7 @@ This paper talks about the scheduling of GPU clusters, which is not necessary re
 * [Budgeted Training: Rethinking Deep Neural Network Training Under Resource Constraints](https://openreview.net/forum?id=HyxLRTVKPH)
 * [DeltaGrad: Rapid retraining of machine learning models](https://icml.cc/virtual/2020/poster/5915) 
 * [Split-CNN: Splitting Window-based Operations in Convolutional Neural Networks for Memory System Optimization](https://dl.acm.org/doi/abs/10.1145/3297858.3304038) The paper addresses the issue of non-sufficient memory issue of GPUs for CNN training. It proposes two approaches. First, it splits a CNN network to multiple smaller ones. Second, it proposes to utilize nv-link to implement memory management offloading. 
-
-
-#### Neural Architecture Search 
-
-* [Once-for-All: Train One Network and Specialize it for Efficient Deployment ](https://openreview.net/forum?id=HylxE1HKwS)
-* [Fast Neural Network Adaptation via Parameter Remapping and Architecture Search ](https://openreview.net/forum?id=rklTmyBKPH)
-* [Breaking the Curse of Space Explosion: Towards Efficient NAS with Curriculum Search](https://icml.cc/virtual/2020/poster/5803) 
+* [Capuchin: Tensor-based GPU Memory Management for Deep Learning](https://dl.acm.org/doi/10.1145/3373376.3378505) 
 
 
 
@@ -70,6 +64,12 @@ algorithm to minimize data transfer cost.
 * [PCGCN: Partition-Centric Processing for Accelerating Graph Convolutional Network](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9139807)
 * [Reducing Communication in Graph Neural Network Training](https://arxiv.org/abs/2005.03300)
 
+#### Neural Architecture Search 
+
+* [Once-for-All: Train One Network and Specialize it for Efficient Deployment ](https://openreview.net/forum?id=HylxE1HKwS)
+* [Fast Neural Network Adaptation via Parameter Remapping and Architecture Search ](https://openreview.net/forum?id=rklTmyBKPH)
+* [Breaking the Curse of Space Explosion: Towards Efficient NAS with Curriculum Search](https://icml.cc/virtual/2020/poster/5803) 
+
 
 #### Continous Learning  
 
@@ -78,12 +78,13 @@ algorithm to minimize data transfer cost.
 * [Scalable and Order-robust Continual Learning with Additive Parameter Decomposition ](https://openreview.net/forum?id=r1gdj2EKPB)
 
 
-
 ### Efficient Inference <a name="inference"></a>
 
 #### Resource Management 
 * [GRNN: Low-Latency and Scalable RNN Inference on GPUs](https://dl.acm.org/doi/10.1145/3302424.3303949) The paper improves the performance of RNN inference by providing a GPU-based RNN inference library, called GRNN, that provides low latency, high throughput, and efficient resource utilization.
 * [μLayer: Low Latency On-Device Inference Using Cooperative Single-Layer Acceleration and Processor-Friendly Quantization](https://dl.acm.org/doi/10.1145/3302424.3303950) μLayer is a low latency on-device inference runtime that significantly improves the latency of NN-assisted services. μLayer accelerates each NN layer by simultaneously utilizing diverse heterogeneous processors on a mobile device and by performing computations using processor-friendly quantization. First, to accelerate an NN layer using both the CPU and the GPU at the same time, μLayer employs a layer distribution mechanism which completely removes redundant computations between the processors. Next, μLayer optimizes the per-processor performance by making the processors utilize different data types that maximize their utilization. In addition, to minimize potential latency increases due to overly aggressive workload distribution, μLayer selectively increases the distribution granularity to divergent layer paths.
+* [DeepEye: Resource Efficient Local Execution of Multiple Deep Vision Models using Wearable Commodity Hardware](https://dl.acm.org/doi/pdf/10.1145/3081333.3081359)
+* [Fast and Scalable In-memory Deep Multitask Learning via Neural Weight Virtualization](https://dl.acm.org/doi/abs/10.1145/3386901.3388947)
 
 #### Model Design 
 * [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](https://icml.cc/virtual/2020/poster/6835) 
