@@ -30,7 +30,7 @@ This is the (evolving) reading list for the seminar. The papers are selected fro
  
 ## Systems for Machine Learning <a name="sys4ml"></a>
 
-### Distributed and Parallel Learning <a name="distribtuted"></a>
+### Distributed and Parallel Learning <a name="distributed"></a>
 
 * [Decentralized Deep Learning with Arbitrary Communication Compression ](https://openreview.net/forum?id=SkgGCkrKvH)
 * [A generic communication scheduler for distributed DNN training acceleration](https://dl.acm.org/doi/10.1145/3341301.3359642) Partition and rearrange the tensor transmissions without changing the code of underlying framework, such as TensorFlow, PyTorch, and MXNet, by reducing the communication overhead. 
@@ -40,10 +40,11 @@ Proposed a inter-batch pipelining to improve parallel training throughput.
 eliminate conflicts with slightly reduced randomness.
 * [Balancing Efficiency and Fairness in Heterogeneous GPU Clusters for Deep Learning](https://dl.acm.org/doi/abs/10.1145/3342195.3387555)
 This paper talks about the scheduling of GPU clusters, which is not necessary related to deep learning.
-
+* [Supporting Very Large Models using Automatic Dataflow Graph Partitioning](http://www.news.cs.nyu.edu/~jinyang/pub/tofu-eurosys19.pdf)
 
 ### Efficient Training <a name="training"></a>
 
+#### DNN Training 
 * [MLPerf Training Benchmark](https://proceedings.mlsys.org/papers/2020/134)
 * [Reformer: The Efficient Transformer ](https://openreview.net/forum?id=rkgNKkHtvB)
 * [Drawing Early-Bird Tickets: Toward More Efficient Training of Deep Networks ](https://openreview.net/forum?id=BJxsrgStvr)
@@ -52,7 +53,7 @@ This paper talks about the scheduling of GPU clusters, which is not necessary re
 * [Split-CNN: Splitting Window-based Operations in Convolutional Neural Networks for Memory System Optimization](https://dl.acm.org/doi/abs/10.1145/3297858.3304038) The paper addresses the issue of non-sufficient memory issue of GPUs for CNN training. It proposes two approaches. First, it splits a CNN network to multiple smaller ones. Second, it proposes to utilize nv-link to implement memory management offloading. 
 
 
-#### Efficient Neural Architecture Search 
+#### Neural Architecture Search 
 
 * [Once-for-All: Train One Network and Specialize it for Efficient Deployment ](https://openreview.net/forum?id=HylxE1HKwS)
 * [Fast Neural Network Adaptation via Parameter Remapping and Architecture Search ](https://openreview.net/forum?id=rklTmyBKPH)
@@ -60,7 +61,7 @@ This paper talks about the scheduling of GPU clusters, which is not necessary re
 
 
 
-#### Efficient GNN Training 
+#### GNN Training 
 * [GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph Embedding ](https://openreview.net/forum?id=r1lGO0EKDH)
 * [Improving the Accuracy, Scalability, and Performance of Graph Neural Networks with Roc](https://proceedings.mlsys.org/papers/2020/83) The paper presents a distributed multi-GPU framework for fast GNN training and inference on graphs. ROC tackles two significant system challenges for distributed GNN computation: Graph partitioning and (2) memory management.  Graph partitioning is based on an online-trained linear regression model. The memory management decides in which device memory to store each intermediate tensor to minimize data transfter cost. ROC introduces a dynamic programming
 algorithm to minimize data transfer cost. 
@@ -80,6 +81,11 @@ algorithm to minimize data transfer cost.
 
 ### Efficient Inference <a name="inference"></a>
 
+#### Resource Management 
+* [GRNN: Low-Latency and Scalable RNN Inference on GPUs](https://dl.acm.org/doi/10.1145/3302424.3303949) The paper improves the performance of RNN inference by providing a GPU-based RNN inference library, called GRNN, that provides low latency, high throughput, and efficient resource utilization.
+* [μLayer: Low Latency On-Device Inference Using Cooperative Single-Layer Acceleration and Processor-Friendly Quantization](https://dl.acm.org/doi/10.1145/3302424.3303950) μLayer is a low latency on-device inference runtime that significantly improves the latency of NN-assisted services. μLayer accelerates each NN layer by simultaneously utilizing diverse heterogeneous processors on a mobile device and by performing computations using processor-friendly quantization. First, to accelerate an NN layer using both the CPU and the GPU at the same time, μLayer employs a layer distribution mechanism which completely removes redundant computations between the processors. Next, μLayer optimizes the per-processor performance by making the processors utilize different data types that maximize their utilization. In addition, to minimize potential latency increases due to overly aggressive workload distribution, μLayer selectively increases the distribution granularity to divergent layer paths.
+
+#### Model Design 
 * [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](https://icml.cc/virtual/2020/poster/6835) 
 * [Train Big, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers](https://icml.cc/virtual/2020/poster/6828) 
 * [Boosting Deep Neural Network Efficiency with Dual-Module Inference](https://icml.cc/virtual/2020/poster/6670)
@@ -87,7 +93,7 @@ algorithm to minimize data transfer cost.
 
 #### Compression 
 
-* [BlockSwap: Fisher-guided Block Substitution for Network Compression on a Budget ](https://openreview.net/forum?id=SklkDkSFPB)
+* [BlockSwap: Fisher-guided Block Substitution for Network Compression on a Budget](https://openreview.net/forum?id=SklkDkSFPB)
 * [Probabilistic Connection Importance Inference and Lossless Compression of Deep Neural Networks ](https://openreview.net/forum?id=HJgCF0VFwr)
 * [Scalable Model Compression by Entropy Penalized Reparameterization ](https://openreview.net/forum?id=HkgxW0EYDS) 
 * [Compression based bound for non-compressed network: unified generalization error analysis of large compressible deep neural network ](https://openreview.net/forum?id=ByeGzlrKwH) 
@@ -136,7 +142,7 @@ The work focuses on the improvement of performance for ML-as-a-Service:: develop
 
 
 
-### Testing and debugging <a name="debugging"></a>
+### Testing and Debugging <a name="debugging"></a>
 * [Model Assertions for Monitoring and Improving ML Models](https://proceedings.mlsys.org/papers/2020/189) The paper tries to monitor and improve ML models by using model assertions at all stages of ML system delopyment, including runtime monitoring and validating labels.  For runtime monitoring, model assertions can find high confidence errors. For training, they propose a bandit-based active learning algorithm that can sample from data flagged by assertion to reduce labeling cost. 
 
 
