@@ -63,6 +63,9 @@ algorithm to minimize data transfer cost.
 * [Deep graph library: Towards efficient and scalable deep learning on graphs](https://arxiv.org/abs/1909.01315)
 * [PCGCN: Partition-Centric Processing for Accelerating Graph Convolutional Network](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9139807)
 * [Reducing Communication in Graph Neural Network Training](https://arxiv.org/abs/2005.03300)
+* [ICLR'20][GraphSAINT: Graph Sampling Based Inductive Learning Method](https://arxiv.org/pdf/1907.04931.pdf)
+* [NIPS'19][Layer-Dependent Importance Sampling for Training Deep and Large Graph Convolutional Networks](http://papers.nips.cc/paper/by-source-2019-6006)
+* [KDD'19][Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks](https://arxiv.org/pdf/1905.07953.pdf)
 
 #### Neural Architecture Search 
 
