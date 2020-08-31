@@ -239,3 +239,4 @@ The work focuses on the cloud-based inference. It introduces the noise to the in
 - [https://emeryberger.com/systems-lunch/](https://emeryberger.com/systems-lunch/)
 - [https://deeplearn.org/](https://deeplearn.org/)
 - [https://www.connectedpapers.com/](https://www.connectedpapers.com/)
+- [Software Engineering for AI/ML -- An Annotated Bibliography](https://github.com/ckaestne/seaibib)
