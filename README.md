@@ -1,5 +1,9 @@
 # CS692 Seminar: Systems for Machine Learning, Machine Learning for Systems
+Course website: [https://guanh01.github.io/teaching/2020-fall-mlsys](https://guanh01.github.io/teaching/2020-fall-mlsys) 
+
+
 This is the (evolving) reading list for the seminar. The papers are from top ML venues (ICML, ICLR, etc) and system venues (ASPLOS, PLDI, etc). The selection criteria is whether some keywords are in paper title.  
+
 
 Topics of interest include, but are not limited to (copied from [MLSys website](https://mlsys.org/Conferences/2021/CallForPapers)):
 * Efficient model training, inference, and serving 
