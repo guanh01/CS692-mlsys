@@ -100,35 +100,30 @@ algorithm to minimize data transfer cost.
 
 #### Resource Management 
 * [VLDB'21][Jointly Optimizing Preprocessing and Inference for DNN-based Visual Analytics](https://arxiv.org/pdf/2007.13005.pdf)
+* [MLSys'20] [Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications](https://proceedings.mlsys.org/paper/2020/file/f7177163c833dff4b38fc8d2872f1ec6-Paper.pdf)
 * [MLSys'20][Willump: A Statistically-Aware End-to-end Optimizer for Machine Learning Inference](https://arxiv.org/pdf/1906.01974.pdf)
 * [MobiSys'20][Fast and Scalable In-memory Deep Multitask Learning via Neural Weight Virtualization](https://dl.acm.org/doi/abs/10.1145/3386901.3388947)
+* [RTSS'19][Pipelined Data-Parallel CPU/GPU Scheduling for Multi-DNN Real-Time Inference](https://intra.ece.ucr.edu/~hyoseung/pdf/rtss19-dart.pdf)
 * [EuroSys'19][GRNN: Low-Latency and Scalable RNN Inference on GPUs](https://dl.acm.org/doi/10.1145/3302424.3303949) The paper improves the performance of RNN inference by providing a GPU-based RNN inference library, called GRNN, that provides low latency, high throughput, and efficient resource utilization.
 * [EuroSys'19][μLayer: Low Latency On-Device Inference Using Cooperative Single-Layer Acceleration and Processor-Friendly Quantization](https://dl.acm.org/doi/10.1145/3302424.3303950) μLayer is a low latency on-device inference runtime that significantly improves the latency of NN-assisted services. μLayer accelerates each NN layer by simultaneously utilizing diverse heterogeneous processors on a mobile device and by performing computations using processor-friendly quantization. First, to accelerate an NN layer using both the CPU and the GPU at the same time, μLayer employs a layer distribution mechanism which completely removes redundant computations between the processors. Next, μLayer optimizes the per-processor performance by making the processors utilize different data types that maximize their utilization. In addition, to minimize potential latency increases due to overly aggressive workload distribution, μLayer selectively increases the distribution granularity to divergent layer paths.
 * [MobiSys'17][DeepEye: Resource Efficient Local Execution of Multiple Deep Vision Models using Wearable Commodity Hardware](https://dl.acm.org/doi/pdf/10.1145/3081333.3081359)
 
-
-#### Model Design 
-* [ICML'20][PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](https://icml.cc/virtual/2020/poster/6835) 
-* [ICML'20][Train Big, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers](https://icml.cc/virtual/2020/poster/6828) 
-* [ICML'20][Boosting Deep Neural Network Efficiency with Dual-Module Inference](https://icml.cc/virtual/2020/poster/6670)
-
-
 #### Compression 
-
+* [ICML'20][Train Big, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers](https://icml.cc/virtual/2020/poster/6828)
 * [ICLR'20][BlockSwap: Fisher-guided Block Substitution for Network Compression on a Budget](https://openreview.net/forum?id=SklkDkSFPB)
 * [ICLR'20][Probabilistic Connection Importance Inference and Lossless Compression of Deep Neural Networks ](https://openreview.net/forum?id=HJgCF0VFwr)
 * [ICLR'20][Scalable Model Compression by Entropy Penalized Reparameterization ](https://openreview.net/forum?id=HkgxW0EYDS) 
 * [ICLR'20][Compression based bound for non-compressed network: unified generalization error analysis of large compressible deep neural network ](https://openreview.net/forum?id=ByeGzlrKwH) 
 
 #### Pruning 
-
+* [ICML'20][PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](https://icml.cc/virtual/2020/poster/6835) 
 * [MLSys'20][What is the State of Neural Network Pruning?](https://proceedings.mlsys.org/papers/2020/73) This paper provides an overview of approaches to pruning. The finding is that the community sufers from a lack of standardized benchmarks and metrics. It is hard to compare pruning techniques to one another or determine the progress the filed has made. The paper also introduce ShrinkBench, an open-source framework to faciliate standardized evaluations of pruning methods. 
 * [ICML'20][PENNI: Pruned Kernel Sharing for Efficient CNN Inference](https://icml.cc/virtual/2020/poster/6232)
 * [ICML'20][Operation-Aware Soft Channel Pruning using Differentiable Masks](https://icml.cc/virtual/2020/poster/5997) 
 * [ICML'20][DropNet: Reducing Neural Network Complexity via Iterative Pruning](https://icml.cc/virtual/2020/poster/6092)
 * [ICLR'20][A Signal Propagation Perspective for Pruning Neural Networks at Initialization ](https://openreview.net/forum?id=HJeTo2VFwH) 
 * [ICML'20][Network Pruning by Greedy Subnetwork Selection](https://icml.cc/virtual/2020/poster/6053)
-* [ICLR'20][Comparing Rewinding and Fine-tuning in Neural Network Pruning](https://openreview.net/forum?id=S1gSj0NKvB) 
+* [ICLR'20][Talk][Comparing Rewinding and Fine-tuning in Neural Network Pruning](https://openreview.net/forum?id=S1gSj0NKvB) 
 * [ICLR'20][Lookahead: A Far-sighted Alternative of Magnitude-based Pruning ](https://openreview.net/forum?id=ryl3ygHYDB)
 * [ICLR'20][Provable Filter Pruning for Efficient Neural Networks ](https://openreview.net/forum?id=BJxkOlSYDH)
 * [ICLR'20][Dynamic Model Pruning with Feedback ](https://openreview.net/forum?id=SJem8lSFwB)
@@ -136,6 +131,7 @@ algorithm to minimize data transfer cost.
 
 
 #### Quantization 
+* [ICML'20][Boosting Deep Neural Network Efficiency with Dual-Module Inference](https://icml.cc/virtual/2020/poster/6670)
 * [ICML'20][Towards Accurate Post-training Network Quantization via Bit-Split and Stitching](https://icml.cc/virtual/2020/poster/5787)
 * [ICML'20][Differentiable Product Quantization for Learning Compact Embedding Layers](https://icml.cc/virtual/2020/poster/6429) 
 * [ICML'20][Online Learned Continual Compression with Adaptive Quantization Modules](https://icml.cc/virtual/2020/poster/6338) 
@@ -162,7 +158,6 @@ The work focuses on the improvement of performance for ML-as-a-Service:: develop
 * [OSDI'18][PRETZEL: Opening the Black Box of Machine Learning Prediction Serving Systems](https://www.usenix.org/system/files/osdi18-lee.pdf): PRETZEL is  a  prediction  serving  system  introducing  anovel white box architecture enabling both end-to-endand multi-model optimizations. PRETZELis on average able to reduce 99th percentile la-tency by 5.5× while reducing memory footprint by 25×, and increasing throughput by 4.7×.
 
 
-
 ### Testing and Debugging <a name="debugging"></a>
 * [MLSys'20][Model Assertions for Monitoring and Improving ML Models](https://proceedings.mlsys.org/papers/2020/189) The paper tries to monitor and improve ML models by using model assertions at all stages of ML system delopyment, including runtime monitoring and validating labels.  For runtime monitoring, model assertions can find high confidence errors. For training, they propose a bandit-based active learning algorithm that can sample from data flagged by assertion to reduce labeling cost. 
 
@@ -181,7 +176,7 @@ The work focuses on the improvement of performance for ML-as-a-Service:: develop
 * [ICML'20][Second-Order Provable Defenses against Adversarial Attacks](https://icml.cc/virtual/2020/poster/6256)
 * [ICML'20][Understanding and Mitigating the Tradeoff between Robustness and Accuracy](https://icml.cc/virtual/2020/poster/6801) 
 * [ICML'20][Adversarial Robustness via Runtime Masking and Cleansing](https://icml.cc/virtual/2020/poster/5817)
-* [ICLR'20][Adversarial Training and Provable Defenses: Bridging the Gap ](https://openreview.net/forum?id=SJxSDxrKDr)
+* [ICLR'20][Talk][Adversarial Training and Provable Defenses: Bridging the Gap ](https://openreview.net/forum?id=SJxSDxrKDr)
 * [ICLR'20][Defending Against Physically Realizable Attacks on Image Classification ](https://openreview.net/forum?id=H1xscnEKDr) 
 * [ICLR'20][Enhancing Adversarial Defense by k-Winners-Take-All ](https://openreview.net/forum?id=Skgvy64tvr)
 * [ICLR'20][Mixup Inference: Better Exploiting Mixup to Defend Adversarial Attacks ](https://openreview.net/forum?id=ByxtC2VtPB)
