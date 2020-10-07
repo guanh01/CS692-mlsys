@@ -32,6 +32,8 @@ Topics of interest include, but are not limited to (copied from [MLSys website](
 	* [Data Preparation](#data)
 	* [ML programming models](#pl-models)
 * [Machine Learning for Systems](#ml4sys)
+	* [ML Systems](#ml4ml)
+	* [Compiler Optimization](#compiler)
 	* [Programming Language](#pl)
 	* [Memory Management](#mm)
 * [General Reports](#reports)
@@ -106,7 +108,9 @@ algorithm to minimize data transfer cost.
 * [RTSS'19][Pipelined Data-Parallel CPU/GPU Scheduling for Multi-DNN Real-Time Inference](https://intra.ece.ucr.edu/~hyoseung/pdf/rtss19-dart.pdf)
 * [EuroSys'19][GRNN: Low-Latency and Scalable RNN Inference on GPUs](https://dl.acm.org/doi/10.1145/3302424.3303949) The paper improves the performance of RNN inference by providing a GPU-based RNN inference library, called GRNN, that provides low latency, high throughput, and efficient resource utilization.
 * [EuroSys'19][μLayer: Low Latency On-Device Inference Using Cooperative Single-Layer Acceleration and Processor-Friendly Quantization](https://dl.acm.org/doi/10.1145/3302424.3303950) μLayer is a low latency on-device inference runtime that significantly improves the latency of NN-assisted services. μLayer accelerates each NN layer by simultaneously utilizing diverse heterogeneous processors on a mobile device and by performing computations using processor-friendly quantization. First, to accelerate an NN layer using both the CPU and the GPU at the same time, μLayer employs a layer distribution mechanism which completely removes redundant computations between the processors. Next, μLayer optimizes the per-processor performance by making the processors utilize different data types that maximize their utilization. In addition, to minimize potential latency increases due to overly aggressive workload distribution, μLayer selectively increases the distribution granularity to divergent layer paths.
+* [sysml@nips'18][Dynamic Space-Time Scheduling for GPU Inference](http://learningsys.org/nips18/assets/papers/102CameraReadySubmissionGPU_Virtualization%20(8).pdf)
 * [MobiSys'17][DeepEye: Resource Efficient Local Execution of Multiple Deep Vision Models using Wearable Commodity Hardware](https://dl.acm.org/doi/pdf/10.1145/3081333.3081359)
+
 
 #### Compression 
 * [ICML'20][Train Big, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers](https://icml.cc/virtual/2020/poster/6828)
@@ -210,17 +214,24 @@ The work focuses on the cloud-based inference. It introduces the noise to the in
 
 ## Machine Learning for Systems <a name="ml4sys"></a>
 
+### ML for ml system <a name='ml4ml'></a>
+* [asplos'20][FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System](https://dl.acm.org/doi/abs/10.1145/3373376.3378508?casa_token=YWcNPnp03fsAAAAA:Xo3RLkiykJSN8H70bsiQre-0hI20U5Sgu3_LYbsIqOSCsi8aBay18752gyZSFvYVlG34pTjrYyHm)
+
+* [Learning to Optimize Tensor Programs](https://papers.nips.cc/paper/7599-learning-to-optimize-tensor-programs.pdf)
+
+### ML for compiler <a name='compiler'></a>
+* [MLsys'20][AutoPhase: Juggling HLS Phase Orderings in Random Forests with Deep Reinforcement Learning](https://proceedings.mlsys.org/paper/2020/file/4e732ced3463d06de0ca9a15b6153677-Paper.pdf)
+
 ### ML for programming languages <a name="pl"></a>
 
 * [PLDI'20][Learning Nonlinear Loop Invariants with Gated Continuous Logic Networks](https://dl.acm.org/doi/abs/10.1145/3385412.3385986) The paper proposes a new neuro architecture (Gated Continuous Logic Network(G-CLN)) to learn nonlinear loop invariants. Utilizing DNN to solve and understand the system issue. 
 * [PLDI'20][Blended, Precise Semantic Program Embeddings](https://dl.acm.org/doi/abs/10.1145/3385412.3385999) This paper is utilizing ML for systems. Basically, it utilizes DNN to learn program embeddings, vector representations of pro-gram semantics. Existing approaches predominately learn to embed programs from their source code, and, as a result, they do not capture deep, precise program semantics. On the other hand, models learned from runtime information critically depend on the quality of program executions, thus leading to trainedmodels with highly variant quality. LiGer learns programrepresentations from a mixture of symbolic and concrete exe-cution traces.
-
+* [ICLR'18][Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
 
 ### ML for memory management <a name="mm"></a>
 
 * [ICML'20][An Imitation Learning Approach for Cache Replacement](https://icml.cc/virtual/2020/poster/6044)
 * [(ASPLOS'20][Learning-based Memory Allocation for C++ Server Workloads](https://dl.acm.org/doi/pdf/10.1145/3373376.3378525)
-
 
 
 ## General Reports <a name="reports"></a>
