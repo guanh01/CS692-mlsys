@@ -42,6 +42,7 @@ Topics of interest include, but are not limited to (copied from [MLSys website](
 ## Systems for Machine Learning <a name="sys4ml"></a>
 
 ### Distributed and Parallel Learning <a name="distributed"></a>
+* [USENIX ATC'20][HetPipe: Enabling Large DNN Training on (Whimpy) Heterogeneous GPU Clusters through Integration of Pipelined Model Parallelism and Data Parallelism](https://www.usenix.org/conference/atc20/presentation/park)
 * [ICLR'20][Decentralized Deep Learning with Arbitrary Communication Compression ](https://openreview.net/forum?id=SkgGCkrKvH)
 * [ASPLOS'20][Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training.](https://dl.acm.org/doi/abs/10.1145/3373376.3378499) Prague is a high-performance heterogeneity-aware asynchronous decentralized training approach that improves the performance for high heterogeneity systems. It has two contributions.  First, it reduces synchronization cost via Partial All-Reduce that enables fast synchronization among a group of workers. Second, it reduces serialization cost via static group scheduling in homogeneous environment and simple techniques, i.e., Group Buffer and Group Division, to largely
 eliminate conflicts with slightly reduced randomness.
@@ -56,6 +57,9 @@ Proposed a inter-batch pipelining to improve parallel training throughput.
 ### Efficient Training <a name="training"></a>
 
 #### DNN Training 
+
+
+* [USENIX ATC'20][Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training](https://www.usenix.org/conference/atc20/presentation/zhu-hongyu)
 * [MLSys'20][MLPerf Training Benchmark](https://proceedings.mlsys.org/papers/2020/134)
 * [ICLR'20(talk)][Reformer: The Efficient Transformer ](https://openreview.net/forum?id=rkgNKkHtvB)
 * [ICLR'20(spotlight)][Drawing Early-Bird Tickets: Toward More Efficient Training of Deep Networks ](https://openreview.net/forum?id=BJxsrgStvr)
